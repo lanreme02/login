@@ -18,6 +18,11 @@ public class ProfessorService {
 
     }
 
+    public void add(String userName, String password){
+         repository.save(new ProfessorEntity(userName,password));
+
+    }
+
     public boolean validate(String data ){
 
         return !(data.contains(".") || data.contains("-") || data.contains("_") || data.contains("#"));

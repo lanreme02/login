@@ -1,15 +1,15 @@
-package com.cognizant.login.model;
+package com.cognizant.login.controller;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class LoginRequest {
+public class Request {
 
     private String userName;
     private String passWord;
 
     @JsonCreator
-    public LoginRequest(@JsonProperty("username") final String userName, @JsonProperty("password") final String passWord) {
+    public Request(@JsonProperty("username") final String userName, @JsonProperty("password") final String passWord) {
         this.userName= userName;
         this.passWord = passWord;
     }
